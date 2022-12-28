@@ -50,11 +50,11 @@ int main(int argc, char** argv){
                 break;
             }
             case 'b':{
-                bsize = strtol(optorg, NULL , 0);
+                bsize = strtol(optarg, NULL , 0);
                 break;
             }
             case 'n':{
-                nwrites = strtol(optorg, NULL, 0);
+                nwrites = strtol(optarg, NULL, 0);
                 break;
             }
             case 'i':{
@@ -62,9 +62,9 @@ int main(int argc, char** argv){
                 break;
             }
             case 'm':{
-                switch (*optrag){
+                switch (*optarg){
                     case 'b':
-                        oflag |= 0;
+                        oflag |= O_ASYNC;
                         break;
                     case 's':
                         oflag |= O_SYNC;
@@ -120,7 +120,7 @@ int main(int argc, char** argv){
     }
     /*To level the playing field, sync the file if not sync'd alreafy. */
     if(0 == (oflag & (O_SYNC|O_DSYNC)))
-        fdatasync(odf);
+        fdatasync(ofd);
 
             free(buffer);
     close(ofd);
