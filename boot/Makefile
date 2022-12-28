@@ -1,4 +1,4 @@
-# Makefile for creating3
+# Makefile for creating img file
 # Chi-Sheng Shih
 # 2016-09-08
 #
