@@ -64,7 +64,7 @@ int main(int argc, char** argv){
             case 'm':{
                 switch (*optarg){
                     case 'b':
-                        oflag |= O_ASYNC;
+                        oflag |= 0;
                         break;
                     case 's':
                         oflag |= O_SYNC;
