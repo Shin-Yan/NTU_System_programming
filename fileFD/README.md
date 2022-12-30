@@ -13,7 +13,6 @@ $ make
 -b: block size for each round
 -n: number of rounds to write
 
-using time command to see the detail execution time
 ex: ./file_FD -i aaa.txt -o tmp.txt -m b -b 4 -n 10000
 ```
 
