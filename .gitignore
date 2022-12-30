@@ -1,2 +1,5 @@
 foo.out
 syncio/syncio
+fileFD/aaa.txt
+fileFD/tmp.txt
+fileFD/file_FD
