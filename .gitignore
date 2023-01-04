@@ -6,3 +6,5 @@ fileFD/file_FD
 MP0/FILE.txt
 MP0/input.txt
 test
+lseek/lseek
+lseek/file.hole
