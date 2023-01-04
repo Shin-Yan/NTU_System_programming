@@ -7,19 +7,22 @@
 # Useful command
 CC = gcc
 ECHO = echo
-SOURCE = lseek.c
+CFLAGS = -Wall
 
-BIN = $(patsubst %.c,%,$(SOURCE))
-all:
-	@$(ECHO) "Source file is $(SOURCE)"
-	@$(ECHO) "Binary file is $(BIN)"
+SOURCE =  $(wildcard *.c)
+PROGS = $(patsubst %.c,%,$(SOURCE))
+all: $(PROGS)
+	@$(ECHO) "Source files are $(SOURCE)"
+	@$(ECHO) "Program files are $(PROGS)"
 	@$(ECHO) "--------------------------------------------------------------"
-	@$(ECHO) "Creating binary files"
+	@$(ECHO) "Creating program files"
 	@$(ECHO) "--------------------------------------------------------------"
-	$(CC) -o $(BIN) $(SOURCE)
+
+%: %.c
+	$(CC) $(CFLAGS) -o $@ $<
 
 clean:
 	@$(ECHO) "--------------------------------------------------------------"
-	@$(ECHO) "Clean all temporary files"
+	@$(ECHO) "Clean all object files"
 	@$(ECHO) "--------------------------------------------------------------"
-	rm -rf $(BIN)
+	rm -rf $(OBJS)
