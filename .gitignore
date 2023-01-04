@@ -12,3 +12,4 @@ lseek/lseek_hole
 lseek/file.fill
 atomic/f3
 atomic/f4
+atomic/atomic_append
