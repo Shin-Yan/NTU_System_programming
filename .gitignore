@@ -9,4 +9,4 @@ test
 lseek/lseek_fill
 lseek/file.hole
 lseek/lseek_hole
-lseek/fill.fill
+lseek/file.fill
