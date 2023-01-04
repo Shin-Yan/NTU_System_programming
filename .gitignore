@@ -10,3 +10,5 @@ lseek/lseek_fill
 lseek/file.hole
 lseek/lseek_hole
 lseek/file.fill
+atomic/f3
+atomic/f4
