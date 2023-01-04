@@ -21,7 +21,7 @@ $ vi file.fill  # You will see a lot of NULL bytes within vi tool
 :q!             # leave the vi
 ```
 
-4. If there are something you want to modify, please modify the lseek.c and use
+4. If there are something you want to modify, please modify the source files and use
 ```command
 $ make clean
 $ make

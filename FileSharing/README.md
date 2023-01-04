@@ -18,7 +18,7 @@ $ ./FileSHaring_open
 $ ./FileSharing_fopen
 ```
 
-4. If there are something you want to modify, please modify the lseek.c and use
+4. If there are something you want to modify, please modify the source files and use
 ```command
 $ make clean
 $ make

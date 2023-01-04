@@ -16,7 +16,7 @@ $ make
 ex: ./file_FD -i aaa.txt -o tmp.txt -m b -b 4 -n 10000
 ```
 
-3. Third, if there are something you want to modify, please modify the syncio.c and use
+3. Third, if there are something you want to modify, please modify the fileFD.c and use
 ```command
 $ make clean
 $ make
