@@ -1,28 +1,33 @@
 .PHONY: clean all
 
-# Makefile for creating file_FD
+# Makefile for creating lseek
 # Shin-Yan
-# 2022/12/28
+# 2023/1/4
 #
 # Useful command
-CC = gcc
 ECHO = echo
-CFLAGS = -Wall
+ROOT = ..
+LIBAPUE = $(ROOT)/lib/libapue.a
+
+PLATFORM=$(shell $(ROOT)/systype.sh)
+include $(ROOT)/Make.defines.$(PLATFORM)
 
 SOURCE =  $(wildcard *.c)
 PROGS = $(patsubst %.c,%,$(SOURCE))
-all: $(PROGS)
+all: $(PROGS) 
 	@$(ECHO) "Source files are $(SOURCE)"
 	@$(ECHO) "Program files are $(PROGS)"
 	@$(ECHO) "--------------------------------------------------------------"
 	@$(ECHO) "Creating program files"
 	@$(ECHO) "--------------------------------------------------------------"
 
-%: %.c
-	$(CC) $(CFLAGS) -o $@ $<
+%: %.c $(LIBAPUE)
+	$(CC) $(CFLAGS) $@.c -o $@ $(LDFLAGS) $(LDLIBS)
 
 clean:
 	@$(ECHO) "--------------------------------------------------------------"
 	@$(ECHO) "Clean all object files"
 	@$(ECHO) "--------------------------------------------------------------"
 	rm -rf $(PROGS)
+
+include $(ROOT)/Make.libapue.inc

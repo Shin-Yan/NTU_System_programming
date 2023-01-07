@@ -1,14 +1,16 @@
 .PHONY: clean all
 
-# Makefile for creating file_FD
+# Makefile for creating fileflags
 # Shin-Yan
 # 2023/1/4
 #
 # Useful command
-CC = gcc
 ECHO = echo
-CFLAGS = -Wall
-LIBAPUE = ../include
+ROOT = ..
+LIBAPUE = $(ROOT)/lib/libapue.a
+
+PLATFORM=$(shell $(ROOT)/systype.sh)
+include $(ROOT)/Make.defines.$(PLATFORM)
 
 SOURCE =  $(wildcard *.c)
 PROGS = $(patsubst %.c,%,$(SOURCE))
@@ -20,10 +22,12 @@ all: $(PROGS)
 	@$(ECHO) "--------------------------------------------------------------"
 
 %: %.c $(LIBAPUE)
-	$(CC) $(CFLAGS) -o $@ $< -I $(LIBAPUE)
+	$(CC) $(CFLAGS) $@.c -o $@ $(LDFLAGS) $(LDLIBS)
 
 clean:
 	@$(ECHO) "--------------------------------------------------------------"
 	@$(ECHO) "Clean all object files"
 	@$(ECHO) "--------------------------------------------------------------"
 	rm -rf $(PROGS)
+
+include $(ROOT)/Make.libapue.inc
