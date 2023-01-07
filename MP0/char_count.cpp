@@ -6,7 +6,7 @@ int main(int argc, char** argv){
     string charset = argv[1];
     /*Init CHARSET lookup table*/
     vector<bool> isIn(128,false);
-    for(int i = 0 ; i < charset.size() ; i++)
+    for(int i = 0 ; i < (int)charset.size() ; i++)
         isIn[charset[i]]=true;
     
     FILE* fileIn = stdin;

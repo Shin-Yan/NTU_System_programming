@@ -1,4 +1,4 @@
-DIRS = atomic boot fileFD fileflags FileSharing lseek syncio \
+DIRS = atomic boot fileFD fileflags FileSharing lseek syncio terminal_size \
 	MP0
 
 all:
@@ -10,3 +10,4 @@ clean:
 	for i in $(DIRS); do \
 		(cd $$i && echo "cleaning $$i" && $(MAKE) clean) || exit 1; \
 	done
+	cd lib && $(MAKE) clean || exit 1;
