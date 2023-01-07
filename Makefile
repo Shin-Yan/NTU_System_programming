@@ -1,4 +1,4 @@
-DIRS = atomic boot fileFD fileFlags fileSharing lseek syncio \
+DIRS = atomic boot fileFD fileflags FileSharing lseek syncio \
 	MP0
 
 all:
