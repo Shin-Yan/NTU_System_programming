@@ -13,4 +13,4 @@ lseek/file.fill
 atomic/f3
 atomic/f4
 atomic/atomic_append
-fileflags/fileIO
+fileflags/temp.foo
