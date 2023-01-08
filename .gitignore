@@ -5,6 +5,7 @@ fileFD/tmp.txt
 fileFD/file_FD
 MP0/FILE.txt
 MP0/input.txt
+MP0/char_count
 test
 lseek/lseek_fill
 lseek/file.hole
@@ -14,3 +15,14 @@ atomic/f3
 atomic/f4
 atomic/atomic_append
 fileflags/temp.foo
+lib/*.o
+lib/*.a
+FileSharing/FileSharing_P1
+FileSharing/FileSharing_P2
+FileSharing/FileSharing_dup
+FileSharing/FileSharing_fopen
+FileSharing/FileSharing_open
+boot/HelloWorld2017.bin
+boot/HelloWorld2017.img
+fileflags/fileflags
+terminal_size/winch
