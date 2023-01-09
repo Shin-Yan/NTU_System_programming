@@ -26,3 +26,5 @@ boot/HelloWorld2017.bin
 boot/HelloWorld2017.img
 fileflags/fileflags
 terminal_size/winch
+bufferIO/bufferIO
+bufferIO/write.txt

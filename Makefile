@@ -1,4 +1,4 @@
-DIRS = atomic boot fileFD fileflags FileSharing lseek syncio terminal_size \
+DIRS = atomic boot fileFD fileflags FileSharing lseek syncio terminal_size bufferIO\
 	MP0
 
 all:
